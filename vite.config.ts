@@ -6,10 +6,12 @@ import { VitePWA } from "vite-plugin-pwa";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  
   server: {
     host: "::",
     port: 8080,
   },
+  base: '/27-samaj-app/', 
   plugins: [
     react(),
     mode === "development" && componentTagger(),
